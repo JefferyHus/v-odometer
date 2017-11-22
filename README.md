@@ -11,7 +11,6 @@ Smoothly transitions numbers with ease. Use this library to give you application
 
 ## Usage
 #### ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015)
-- Individual components and directives
 To cherry pick the component, start by importing it in the file where it is being used:
 ```javascript
 import VueOdometer from 'vue-odometer/src'
