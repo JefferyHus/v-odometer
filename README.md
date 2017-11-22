@@ -1,4 +1,4 @@
-<p align="center"><a href="http://github.hubspot.com/odometer/" target="_blank"><img src="http://themesawesome.com/wp-content/uploads/2014/05/odometer.png" width="321" height="219" /></a><br><br>
+<p align="center"><a href="http://github.hubspot.com/odometer/" target="_blank"><img src="http://themesawesome.com/wp-content/uploads/2014/05/odometer.png" width="523" height="167" /></a><br><br>
 <a href="http://github.hubspot.com/odometer/" target="_blank">Odometer</a>
 <br><br>
 </p>
