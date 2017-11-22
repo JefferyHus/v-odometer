@@ -7,7 +7,7 @@
 Smoothly transitions numbers with ease. Use this library to give you application a smooth animation, only applicable on numbers, for more details about the OdometerJS pelase refer to: https://github.com/HubSpot/odometer
 
 ## Installation
-`npm install vue-odometer`
+`npm install v-odometer`
 
 ## Usage
 #### ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015)
