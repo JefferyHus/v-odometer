@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
@@ -9,7 +10,7 @@ module.exports = {
 		filename: '[name].bundle.js'
 	},
 	resolve: {
-		extensions: ['.vue', '.js'],
+		extensions: ['.vue', '.js', '.css'],
 	},
 	module: {
 		loaders: [
@@ -33,7 +34,10 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: [ 'style-loader', 'css-loader' ]
+		        use: ExtractTextPlugin.extract({
+		          fallback: "style-loader",
+		          use: "css-loader"
+		        })
 			}
 		]
 	}
@@ -55,21 +59,29 @@ if (process.env.NODE_ENV === 'production')
         warnings: false
       }
     }),
-    new webpack.optimize.OccurrenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new ExtractTextPlugin({filename: "[name].css", allChunks: true})
   ];
 
 }
 else
 {
   // development configurations
-  module.exports.output.filename = 'dist/[name].dev.js';
+  module.exports.output.filename = '[name].dev.js';
 
   module.exports.module.loaders = module.exports.module.loaders.concat([
-    {
-      test: /\.css$/,
-      loader: 'style!css'
-    }
+	{
+	  	test: /\.css$/,
+	    use: ExtractTextPlugin.extract({
+	      fallback: "style-loader",
+	      use: "css-loader"
+	    })
+	}
   ]);
+
+  module.exports.plugins = [
+  	new ExtractTextPlugin({filename: "[name].css", allChunks: true})
+  ];
 
   module.exports.devServer = {
     contentBase: './'

@@ -42,7 +42,11 @@ Vue.component('vue-odometer': VueOdometer);
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<title>Odometer - VueJS component</title>
-	<!-- Scripts -->
+	<!-- include this style file, it contains all the themes provided from odometer -->
+	<link rel="stylesheet" href="./your/path/to/main.css">
+	<!-- don't forget to include the odometer library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.js"></script>
+	<!-- then load this component -->
 	<script type="text/javascript" src="./your/path/to/main.prod.js"></script>
 </head>
 <body>
