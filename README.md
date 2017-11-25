@@ -34,5 +34,5 @@ Vue.component(VueOdometer);
 ```
 
 ```html
-<vue-odometer :value="mynumber" class="myClassName"></vue-odometer>
+<vue-odometer :value="mynumber"></vue-odometer>
 ```

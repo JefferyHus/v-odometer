@@ -4,14 +4,20 @@
 
 <script>
 	import Odometer from 'odometer'
+	import 'odometer/themes/odometer-theme-car.css'
+	import 'odometer/themes/odometer-theme-default.css'
+	import 'odometer/themes/odometer-theme-digital.css'
+	import 'odometer/themes/odometer-theme-minimal.css'
+	import 'odometer/themes/odometer-theme-plaza.css'
+	import 'odometer/themes/odometer-theme-slot-machine.css'
+	import 'odometer/themes/odometer-theme-train-station.css'
 
 	export default {
-		name: "vue-odometer",
+		name: 'vue-odometer',
 		props: {
 			className:{
 				type: String,
-				required: false,
-				default: "odometer"
+				default: 'odometer'
 			},
 			value: {
 				type: Number,
@@ -43,23 +49,22 @@
 				required: false
 			}
 		},
-		data: function () {
+		data() {
 			return {
 				instance: null
 			}
 		},
 		watch: {
 			value: {
-			handler: function(value)
-			{
-				if (this.instance && this.instance.update) {
-					this.instance.update(value);
-				}
-			},
-			deep: false
+				handler(value) {
+					if (this.instance && this.instance.update) {
+						this.instance.update(value)
+					}
+				},
+				deep: false
 			}
 		},
-		mounted: function () {
+		mounted() {
 			this.instance = new Odometer({
 				el: this.$el,
 				value: this.value,
