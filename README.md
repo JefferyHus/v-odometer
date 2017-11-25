@@ -4,65 +4,35 @@
 </p>
 
 # About Vue-Odometer
+
 Smoothly transitions numbers with ease. Use this library to give you application a smooth animation, only applicable on numbers, for more details about the OdometerJS pelase refer to: https://github.com/HubSpot/odometer
 
 ## Installation
+
 `npm install v-odometer`
 
 ## Usage
-#### ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015)
-To cherry pick the component, start by importing it in the file where it is being used:
+
+start by importing it in the file where it is being used:
 ```javascript
-import VueOdometer from 'vue-odometer/src'
+import VueOdometer from 'v-odometer'
 ```
+
 Then add it to your component definition:
 
 ```javascript
 Vue.component('my-component', {
-    components: {
-        'vue-odometer': VueOdometer
-    }
+    components: {VueOdometer}
     // ...
 })
 ```
+
 Or register it globally:
 
 ```javascript
-Vue.component('vue-odometer': VueOdometer);
-```
-#### ECMAScript 5 (ES5)
-```xml
-...
-<head>
-	<!-- Metas -->
-	<meta name="title" content="ES6-CrawlerDetect">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<title>Odometer - VueJS component</title>
-	<!-- include this style file, it contains all the themes provided from odometer -->
-	<link rel="stylesheet" href="./your/path/to/main.css">
-	<!-- don't forget to include the odometer library -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.js"></script>
-	<!-- then load this component -->
-	<script type="text/javascript" src="./your/path/to/main.prod.js"></script>
-</head>
-<body>
-	<div id="app">
-		...
-		<vue-odometer :value="mynumber" class="myClassName"></vue-odometer>
-		...
-	</div>
-</body>
-...
+Vue.component(VueOdometer);
 ```
 
-```javascript
-var app = new Vue({
-	data: {
-		mynumber: ""
-	}
-})
+```html
+<vue-odometer :value="mynumber"></vue-odometer>
 ```
