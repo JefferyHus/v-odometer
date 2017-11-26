@@ -35,7 +35,7 @@ Vue.component('vue-odometer': VueOdometer);
 ...
 <head>
 	<!-- Metas -->
-	<meta name="title" content="ES6-CrawlerDetect">
+	<meta name="title" content="v-odometer">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,8 +44,6 @@ Vue.component('vue-odometer': VueOdometer);
 	<title>Odometer - VueJS component</title>
 	<!-- include this style file, it contains all the themes provided from odometer -->
 	<link rel="stylesheet" href="./your/path/to/main.css">
-	<!-- don't forget to include the odometer library -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.js"></script>
 	<!-- then load this component -->
 	<script type="text/javascript" src="./your/path/to/main.prod.js"></script>
 </head>
