@@ -7,7 +7,19 @@
 Smoothly transitions numbers with ease. Use this library to give you application a smooth animation, only applicable on numbers, for more details about the OdometerJS pelase refer to: https://github.com/HubSpot/odometer
 
 ## Installation
-`npm install v-odometer`
+```console
+npm install v-odometer
+```
+
+## NOTE
+If you are getting the error of "Unknown Odometer keyword", this means that you are missing odometer library in your application, simply because the Odometer library is not yet exported as an AMD module and still only a commenJS file (refer to: [AMD exporting issues](https://github.com/HubSpot/odometer/pull/102)).
+However if you are not building your applciation in a webpack envirment or similar, and you include VueJS file from a public cdn, then you are fine to include the `./v-odometer/dist/main.prod.js`, the Vue will be public in your window there for this component will be automatically integrated as a global component and you can simply use it directly insidde your html file:
+
+```html
+	...
+	<vue-odometer :value="myValue"></vue-odometer>
+	...
+```
 
 ## Usage
 #### ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015)
@@ -44,6 +56,8 @@ Vue.component('vue-odometer': VueOdometer);
 	<title>Odometer - VueJS component</title>
 	<!-- include this style file, it contains all the themes provided from odometer -->
 	<link rel="stylesheet" href="./your/path/to/main.css">
+	<!-- don't forget to include the odometer library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.js"></script>
 	<!-- then load this component -->
 	<script type="text/javascript" src="./your/path/to/main.prod.js"></script>
 </head>
