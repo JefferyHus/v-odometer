@@ -1,6 +1,6 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require('path')
+const webpack = require('webpack')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
@@ -30,7 +30,8 @@ module.exports = {
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
-				exclude: /node_modules/
+				exclude: /node_modules/,
+				include: path.resolve(__dirname, "node_modules/odometer/odometer.min.js")
 			},
 			{
 				test: /\.css$/,
@@ -41,12 +42,12 @@ module.exports = {
 			}
 		]
 	}
-};
+}
 
 // production configurations
 if (process.env.NODE_ENV === 'production')
 {
-  module.exports.output.filename = '[name].prod.js';
+  module.exports.output.filename = '[name].prod.js'
 
   module.exports.plugins = [
     new webpack.DefinePlugin({
@@ -61,13 +62,13 @@ if (process.env.NODE_ENV === 'production')
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new ExtractTextPlugin({filename: "[name].css", allChunks: true})
-  ];
+  ]
 
 }
 else
 {
   // development configurations
-  module.exports.output.filename = '[name].dev.js';
+  module.exports.output.filename = '[name].dev.js'
 
   module.exports.module.loaders = module.exports.module.loaders.concat([
 	{
@@ -77,15 +78,15 @@ else
 	      use: "css-loader"
 	    })
 	}
-  ]);
+  ])
 
   module.exports.plugins = [
   	new ExtractTextPlugin({filename: "[name].css", allChunks: true})
-  ];
+  ]
 
   module.exports.devServer = {
     contentBase: './'
-  };
+  }
 
-  module.exports.devtool = '#source-map';
+  module.exports.devtool = '#source-map'
 }

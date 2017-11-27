@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	import VueOdometer from 'v-odometer/src'
+	import VueOdometer from '../../src'
 
 	export default {
 		name: 'app',
