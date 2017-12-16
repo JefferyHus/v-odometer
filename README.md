@@ -25,7 +25,7 @@ However if you are not building your applciation in a webpack envirment or simil
 #### ECMAScript 6 (ES6)/ ECMAScript 2015 (ES2015)
 To cherry pick the component, start by importing it in the file where it is being used:
 ```javascript
-import VueOdometer from 'vue-odometer/src'
+import VueOdometer from 'v-odometer/src'
 ```
 Then add it to your component definition:
 
