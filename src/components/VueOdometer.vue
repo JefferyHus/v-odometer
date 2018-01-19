@@ -1,72 +1,47 @@
 <template>
-	<span :class="className"></span>
+  <span :class="className"></span>
 </template>
 
 <script>
-	export default {
-		name: "VueOdometer",
-		props: {
-			className:{
-				type: String,
-				default: "odometer"
-			},
-			value: {
-				type: Number,
-				required: false,
-				default: 0
-			},
-			format: {
-				type: String,
-				required: false,
-				default: '(.ddd),dd'
-			},
-			theme: {
-				type: String,
-				required: false,
-				default: 'minimal'
-			},
-			duration: {
-				type: Number,
-				required: false,
-				default: 3000
-			},
-			animation: {
-				type: String,
-				required: false,
-				default: 'count'
-			},
-			formatFunction: {
-				type: Function,
-				required: false
-			}
-		},
-		data: function () {
-			return {
-				instance: null
-			}
-		},
-	    watch: {
-	      value: {
-	        handler: function(value)
-	        {
-	          if (this.instance && this.instance.update) {
-	            this.instance.update(value);
-	          }
-	        },
-	        deep: false
-	      }
-	    },
-	    mounted: function () {
-	    	this.instance = new Odometer({
-	    		el: this.$el,
-	    		value: this.value,
-	    		theme: this.theme,
-	    		format: this.format,
-	    		duration: this.duration,
-	    		animation: this.animation
-	    	})
+export default {
+  name: 'VueOdometer',
 
-	    	this.instance.render()
-	    }
-	}
+  props: {
+    value: { type: Number, default: () => 0 },
+    theme: { type: String, default: () => 'minimal' },
+    format: { type: String, default: () => '(.ddd),dd' },
+    duration: { type: Number, default: () => 3000 },
+    className: { type: String, default: () => 'odometer' },
+    animation: { type: String, default: () => 'count' },
+    formatFunction: { type: Function },
+  },
+
+  data: () => ({
+    instance: null,
+  }),
+
+  watch: {
+    value: {
+      handler (value) {
+        if (this.instance && this.instance.update) {
+          this.instance.update(value)
+        }
+      },
+      deep: false,
+    },
+  },
+
+  mounted () {
+    this.instance = new Odometer({
+      el: this.$el,
+      value: this.value,
+      theme: this.theme,
+      format: this.format,
+      duration: this.duration,
+      animation: this.animation,
+    })
+
+    this.instance.render()
+  },
+}
 </script>
