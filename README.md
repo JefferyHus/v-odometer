@@ -40,7 +40,7 @@ Vue.component('my-component', {
 Or register it globally:
 
 ```javascript
-Vue.component('vue-odometer': VueOdometer);
+Vue.component('vue-odometer', VueOdometer);
 ```
 #### ECMAScript 5 (ES5)
 ```xml
