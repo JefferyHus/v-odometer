@@ -80,3 +80,13 @@ var app = new Vue({
 	}
 })
 ```
+**Properties:**
+```typescript
+value: { type: Number, default: () => 0 },
+theme: { type: String, default: () => 'minimal' },
+format: { type: String, default: () => '(.ddd),dd' },
+duration: { type: Number, default: () => 3000 },    
+className: { type: String, default: () => 'odometer' },    
+animation: { type: String, default: () => 'count' },    
+formatFunction: { type: Function },
+```
