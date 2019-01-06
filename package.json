@@ -34,12 +34,12 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "html-webpack-plugin": "^2.30.1",
     "jasmine-core": "^2.99.1",
-    "jsdom": "^11.12.0",
-    "karma": "^1.7.1",
+    "jsdom": "^13.1.0",
+    "karma": "^3.1.4",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.2",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-webpack": "^2.0.13",
+    "karma-webpack": "^3.0.5",
     "style-loader": "^0.19.1",
     "vue": "^2.5.17",
     "vue-hot-reload-api": "^2.3.1",
@@ -48,7 +48,7 @@
     "vue-style-loader": "^3.1.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.3"
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "odometer": "^0.4.8"
