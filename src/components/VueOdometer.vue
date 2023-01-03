@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import Odometer from 'odometer'
 export default {
   name: 'VueOdometer',
 
