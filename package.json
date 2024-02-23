@@ -30,7 +30,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "cross-env": "^5.2.0",
-    "css-loader": "^2.1.1",
+    "css-loader": "^6.10.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "html-webpack-plugin": "^5.5.0",
     "jasmine-core": "^2.99.1",
